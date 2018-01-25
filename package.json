@@ -1,0 +1,29 @@
+{
+  "name": "currency-info",
+  "version": "1.0.0",
+  "description": "Display and interact with crypto currency information",
+  "main": "webapp.js",
+  "scripts": {
+    "build-css": "stylus stylesheets/index.styl -o static/css",
+    "watch-css": "stylus stylesheets/index.styl -o static/css -w",
+    "clean": "rimraf static\\css && mkdir static\\css",
+    "build": "npm run clean && npm run build-css",
+    "watch": "npm run clean && npm run watch-css && nodemon app -e js,pug",
+    "start": "node webapp"
+  },
+  "author": "Bindhu Cherian",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.2",
+    "jade": "^1.11.0",
+    "jquery": "^3.2.1",
+    "morgan": "^1.9.0",
+    "nodemon": "^1.12.1",
+    "pug": "^2.0.0-rc.4",
+    "stylus": "^0.54.5"
+  },
+  "devDependencies": {
+    "mkdirp": "^0.5.1",
+    "rimraf": "^2.6.2"
+  }
+}
